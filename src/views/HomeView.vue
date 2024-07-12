@@ -61,18 +61,30 @@ function deleteTodo(index) {
   width: 50px;
   height: 35px;
   background-color: #00a5ff;
-  
-  
+  transform: translateY(2px);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .deleteButton{
   background-color: #ff3022;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.addButton:active, .deleteButton:active {
-  transform: translateY(4px);
-  box-shadow: 0 5px #666;
+.addButton:active {
+  background-color: #007bbf;
+  transform: translateY(2px); 
+}
+
+.deleteButton:active {
+  background-color: #e6493e;
+  transform: translateY(2px); 
 }
 
 .textTable table {
