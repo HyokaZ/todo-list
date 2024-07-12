@@ -5,14 +5,16 @@ const todos = ref([])
 const newTodo = ref('')
 
 function addTodo() {
-  if (newTodo.value.trim()) {
-    todos.value.push(newTodo.value.trim())
+  if (newTodo.value) {
+    todos.value.push(newTodo.value)
     newTodo.value = ''
+    // console.log(todos.value)
   }
 }
 
 function deleteTodo(index) {
   todos.value.splice(index, 1)
+  // console.log(todos.value);
 }
 
 </script>
@@ -72,11 +74,6 @@ function deleteTodo(index) {
   transform: translateY(4px);
   box-shadow: 0 5px #666;
 }
-
-/* เอฟเฟคเมื่อ hover */
-/* .addButton:hover, .deleteButton:hover {
-  background-color: #ccc;
-} */
 
 .textTable table {
   padding: 25px;
